@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<title>Random Numbers - Yahoo Doctor</title>
+		<link rel="stylesheet" type="text/css" href="shakestyle.css">
+	</head>
+	<body>
+		
+	  <!-- navigation bar section -->
+    <nav class="bar">
+      <ul>
+	      <li><img class="logo" src="https://logos-world.net/wp-content/uploads/2020/10/Yahoo-Emblem.png"></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="abt-yd.html">Medical Methods</a></li>
+        <li><a href="generator.html">Auto-Diagnoser</a></li>
+	      <li><a href="more-info.html">Disclaimer</a></li>
+				<li><a href="stats-numbers.html">Random Numbers</a></li>
+      </ul>
+    </nav>
+		
+		<!-- page header and introduction -->
+		<header>
+			<h2>Welcome to the Page that Tests Random Numbers!</h2>
+			<p class="subtitle">This page is completely unrelated to the programming project, but it does have elements of integrating JavaScript with HTML. The element you see below will generate a list of random numbers (a looooong list) that I'm using for my stats project.</p>
+		</header>
+		
+		<!-- random numbers list -->
+		<div id="listMaker">
+			<p id="rando"></p>
+			<script>
+				let randomList = []
+				for (let step = 0; step < 300; step++) {
+					let kronk = Math.floor(Math.random() * 10)
+					randomList.push(" " + kronk)
+				}
+				
+				document.getElementById("rando").innerHTML = randomList
+			</script>
+		</div>
+		
+		

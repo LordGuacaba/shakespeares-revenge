@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Diagnosis - Yahoo Doctor</title>
+    <link rel="stylesheet" type="text/css" href="shakestyle.css">
+		<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  </head>
+  <body>
+	  
+    <!-- navigation bar section -->
+    <nav class="bar">
+      <ul>
+		    <li><img class="logo" src="https://logos-world.net/wp-content/uploads/2020/10/Yahoo-Emblem.png"></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="abt-yd.html">Medical Methods</a></li>
+        <li><a href="generator.html">Auto-Diagnoser</a></li>
+		    <li><a href="more-info.html">Disclaimer</a></li>
+				<li><a href="stats-numbers.html">Random Numbers</a></li>
+      </ul>
+    </nav>
+		
+		<!-- the diagnosis is displayed on this page. It is not accessible from the navigation bar -->
+		<div class="directed">
+			<h3 id="diagLine"></h3>
+			<p id="diagDsc"></p>
+		</div>
+		
+		
+		<script>
+			// This is the randomizer that will determine what diagnosis is given by the website. Unfortunately, sending the form data proved extremely difficult, so the diagnosis will not be based on the form results. 
+			const cancer = "You have cancer!"
+			const stroke = "You have had a stroke!"
+			const heart = "You have a heart disease!"
+			const diabetes = "You have diabetes!"
+			const alz = "You have Alzheimer's!"
+			const covid = "You have Covid-19!"
+			const nothing = "There is nothing wrong with you."
+			
+			const cancerDsc = "Unfortunately, we have identified your symptoms to be a match for malignant cancer, and we are 95% sure that this is the case. Please see a doctor immediately, and enjoy the rest of your limited lifespan."
+			const strokeDsc = "With the symptoms you listed, it is clear that you experienced a stroke recently. Your symptoms, with proper treatment, will probably get better over time. Luckily, the worst is over, but you may have to deal with annoying family members harping on you about their worry."
+			const heartDsc = "Unfortunately, you are one of the thousands of patients that Yahoo Doctor has diagnosed with heart disease, the most common cause of death in the United States. Please visit a doctor to receive the exact specifications, but we urge you to take the utmost care of yourself over the next few days, as you are at higher risk of a heart attack."
+			const diabetesDsc = "Likely due to a number of factors in your lifestyle, you have developed diabetes. Taken care of, this condition is not deadly, and you will see minimal changes to your overall life. Contact us at cure@yahoodoctor.com or visit your local doctor to find out how you can treat your symptoms."
+			const alzDsc = "In case you forgot what the line at the top of this page says, you have Alzheimer's disease. It is integral that you visit your local hospital as soon as possible to make sure you have a laid-out plan for your next few years. Again: you have Alzheimer's! See a doctor!"
+			const covidDsc = "Most cases of Covid-19 do not end up being extremely serious, but you should stay at home and not contact anyone for the next couple of weeks. If your symptoms become worse, contact help@yahoodoctor.com or seek out a local doctor. Please know that we are having a cruel laugh at your expense at the moment; like how do you catch covid this late in the pandemic?"
+			const nothingDsc = "Despite your petulant complaints of major symptoms and ouchies, our top doctors have concluded that what you're experiencing is perfectly normal for a person of your age, sex, and body type. Yahoo Doctor is not liable for your choice to believe us, and we will warn you that nobody has ever won a lawsuit against us because we failed to find whatever wacky thing was wrong with them."
+			
+			const selectionList = [cancer, stroke, heart, diabetes, alz, covid, nothing]
+			const dscList = [cancerDsc, strokeDsc, heartDsc, diabetesDsc, alzDsc, covidDsc, nothingDsc]
+			
+			const selector = Math.floor(Math.random() * 7)
+			
+			document.getElementById("diagLine").innerHTML = selectionList[selector]
+			document.getElementById("diagDsc").innerHTML = dscList[selector]
+		</script>
+			
+		<button class="stupidBox" onclick="backHome()">Take me Back</button>
+		
+		<script>
+			// The onclick function for the "Take me Back" button, which redirects the user's page to the homepage
+			const backHome = () => {
+				window.location.replace("index.html")
+			}
+		</script>
+	</body>
+</html>
