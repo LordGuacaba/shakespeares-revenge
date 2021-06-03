@@ -3,7 +3,17 @@
   <head>
 	  <title>Auto-Diagnoser - Yahoo Doctor</title>
 	  <link rel="stylesheet" type="text/css" href="shakestyle.css">
+		<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 	</head>
+	
+	
+	<script>
+		// This function will redirect to the diagnosis page when the "submit" button is clicked. Due to numerous difficulties, no data will actually be sent.
+		function getDiag() {
+			window.location.href = "diagnosis.html"
+		}
+	</script>
+		
 	<body>
 	
 	  <!-- navigation bar section -->
@@ -14,6 +24,7 @@
         <li><a href="abt-yd.html">Medical Methods</a></li>
         <li><a href="generator.html">Auto-Diagnoser</a></li>
 	      <li><a href="more-info.html">Disclaimer</a></li>
+				<li><a href="stats-numbers.html">Random Numbers</a></li>
       </ul>
     </nav>
 	  
@@ -23,9 +34,65 @@
 		</header>
 		
 		<form>
-			
+			<div id="symptoms">
+				<h4>Select any symptoms that you are experiencing</h4>
+				<label for="nausea">Nausea</label>
+				<input type="checkbox" id="nausea">
+				<label for="vomitting">Vomitting</label>
+				<input type="checkbox" id="vomitting">
+				<label for="chills">Chills</label>
+				<input type="checkbox" id="chills">
+				<label for="fever">Fever</label>
+				<input type="checkbox" id="fever">
+				<label for="coughing">Coughing</label>
+				<input type="checkbox" id="coughing">
+				<label for="congestion">Congestion</label>
+				<input type="checkbox" id="congestion">
+				<label for="sneezing">Sneezing</label>
+				<input type="checkbox" id="sneezing">
+				<label for="fatigue">Fatigue</label>
+				<input type="checkbox" id="fatigue">
+				<label for="shortness">Shortness of Breath</label>
+				<input type="checkbox" id="fever">
+				<label for="headache">Headache</label>
+				<input type="checkbox" id="headache">
+			</div>
+			<div id="pain">
+				<h4>Select any general areas in which you are experiencing pain</h4>
+				<label for="head">Head</label>
+				<input type="checkbox" id="head">
+				<label for="chest">Chest</label>
+				<input type="checkbox" id="chest">
+				<label for="joint">Joints</label>
+				<input type="checkbox" id="joint">
+				<label for="muscle">Muscles</label>
+				<input type="checkbox" id="muscle">
+				<label for="stomach">Stomach</label>
+				<input type="checkbox" id="stomach">	
+			</div>
+			<div id="major">
+				<h4>Please select any major symptoms you are experiencing</h4>
+				<label for="memory">Memory Loss</label>
+				<input type="checkbox" id="memory">
+				<label for="faint">Fainting</label>
+				<input type="checkbox" id="faint">
+				<label for="blood">Internal Bleeding</label>
+				<input type="checkbox" id="blood">
+				<label for="stupid">Extreme Stupidity</label>
+				<input type="checkbox" id="stupid">
+				<label for="death">Death</label>
+				<input type="checkbox" id="death">
+			</div>
+			<div id="type-ins">
+				<h4>Please answer the following questions</h4>
+				<label for="rating">On a scale of 1 to 10, how would you rate your overall feeling of health?</label>
+				<input type="range" id="rating" min="0" max="10">
+				<h4> </h4>
+				<label for="other">Are you experiencing any other symptoms?</label>
+				<input type="text" id="other">
+			</div>
 		</form>
-		
+		<button onclick="getDiag()" class="stupidBox">Submit</button>
   </body>
 </html>
 	
