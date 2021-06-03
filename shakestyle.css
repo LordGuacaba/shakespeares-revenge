@@ -22,12 +22,13 @@ header {
 	text-align: center;
 }
 
-#subtitle {
+.subtitle {
 	color: #61108E;
 	font-family: serif;
 	font-size: 48px;
 	font-style: italic;
-	
+	text-align: center;
+	padding: 0 60px;
 }
 
 h1 {
@@ -50,7 +51,10 @@ h3 {
 	
 }
 
-p {
+form {
+	text-align: center;
+	display: inline;
+	padding-right: 10px;
 }
 
 #mainhead {
@@ -99,17 +103,42 @@ p {
 	padding: 0 60px;
 }
 
-.quote {
+.directed {
+	font-family: "Rubik";
 	margin: 0 20px;
 	border: 3px solid orchid;
 	padding: 20px;
 }
 
-.quote h3 {
+.directed h3 {
 	font-family: "Rubik";
 	font-size: 48px;
 }
 
+.output {
+	font-family: "Rubik";
+	font-size: 28px;
+	margin: 20px 60px;
+	border: 3px solid orchid;
+	padding: 40px;
+}
+
+.stupidBox {
+	text-align: center;
+	display: inline;
+	margin: 20px 680px;
+	width: 100px;
+}
+
 #methods {
 	background-color: lavender;
+}
+
+#listMaker {
+	padding: 20px;
+	border: 2px solid orchid;
+}
+
+#diagLine {
+	text-align: center;
 }
